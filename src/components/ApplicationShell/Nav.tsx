@@ -2,7 +2,7 @@
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { icons } from "@assets/icons";
-import ThemeToggle from "./ThemeToggle";
+// import ThemeToggle from "./ThemeToggle";
 // import { apps, notifications } from "@data/defaultData";
 import Link from "next/link";
 import { useApplicationShell } from "@contexts/ApplicationShellContext";
@@ -66,7 +66,7 @@ function Nav() {
           </form>
         </div>
         <div className="flex items-center lg:order-2">
-          <ThemeToggle />
+          {/* <ThemeToggle /> */}
           <button
             type="button"
             data-drawer-toggle="drawer-navigation"
