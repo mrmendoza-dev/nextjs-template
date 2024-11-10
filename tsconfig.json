@@ -5,10 +5,12 @@
     "allowJs": true,
     "skipLibCheck": true,
 
+
     "strict": true,
     "noFallthroughCasesInSwitch": true,
     "noUnusedLocals": false, // Change to false to ignore unused locals
     "noUnusedParameters": false, // Change to false to ignore unused parameters
+
 
     "noEmit": true,
     "esModuleInterop": true,
