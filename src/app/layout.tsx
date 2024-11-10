@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "@styles/globals.css";
 
+import { ApplicationShellProvider } from "@contexts/ApplicationShellContext";
+import { ToastProvider } from "@contexts/ToastContext";
+
+import ApplicationShell from "@components/ApplicationShell/ApplicationShell";
 
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
@@ -86,7 +90,15 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <ApplicationShellProvider>
+          <ToastProvider>
+            <ApplicationShell>
+              <div className="ApplicationShell">
+                {children}
+              </div>
+            </ApplicationShell>
+          </ToastProvider>
+        </ApplicationShellProvider>
         {/* <script
           dangerouslySetInnerHTML={{
             __html: `
